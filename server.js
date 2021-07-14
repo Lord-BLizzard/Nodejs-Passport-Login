@@ -10,6 +10,8 @@ const flash = require('express-flash')
 const session = require('express-session')
 const methodOverride = require('method-override')
 
+app.use(express.static(__dirname + '/views'))
+
 const initializePassport = require('./passport-config')
 initializePassport(
   passport,
