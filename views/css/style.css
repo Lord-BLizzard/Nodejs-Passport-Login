@@ -96,6 +96,16 @@ body {
   background-color: rgb(2, 190, 190);
 }
 
+#reg {
+  border: 1px solid cyan;
+  background-color: cyan;
+}
+
+#reg:hover {
+  background-color: rgb(2, 190, 190);
+  border: 1px solid rgb(2, 190, 190);
+}
+
 #nav {
   background-color: cyan;
 }
