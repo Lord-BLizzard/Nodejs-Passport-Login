@@ -8,10 +8,12 @@ const toggleLogin = () => {
     loginForm.children[0].innerHTML = "Teacher Register";
     slider.children[0].innerHTML = "<h2>Not a Teacher?</h2>";
     slider.children[1].innerHTML = "Student Register";
+    document.getElementById("checkbox").checked = false
   } else {
     loginForm.children[0].innerHTML = "Student Register";
     slider.children[0].innerHTML = "<h2>Not a Student?</h2>";
     slider.children[1].innerHTML = "Teacher Register";
+    document.getElementById("checkbox").checked = true
   }
 };
 // const forgotPass = () => {

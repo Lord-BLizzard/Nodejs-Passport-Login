@@ -13,6 +13,17 @@ const toggleLogin = () => {
     slider.children[0].innerHTML = "<h2>Not a Student?</h2>";
     slider.children[1].innerHTML = "Teacher Login";
   }
+  // if (loginText === "Student Register") {
+  //   loginForm.children[0].innerHTML = "Teacher Login";
+  //   slider.children[0].innerHTML = "<h2>Not a Teacher?</h2>";
+  //   slider.children[1].innerHTML = "Student Login";
+  //   document.getElementById("checkbox").checked = false
+  // } else {
+  //   loginForm.children[0].innerHTML = "Student Login";
+  //   slider.children[0].innerHTML = "<h2>Not a Student?</h2>";
+  //   slider.children[1].innerHTML = "Teacher Login";
+  //   document.getElementById("checkbox").checked = true
+  // }
 };
 const forgotPass = () => {
   let forgotPass = `<div class="login-form login-forgot-pass" id="login-form">

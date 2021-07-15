@@ -34,7 +34,12 @@ app.use(passport.session())
 app.use(methodOverride('_method'))
 
 app.get('/', checkAuthenticated, (req, res) => {
-  res.render('index.ejs', { name: req.user.name })
+  if (req.user.isStudent == 'on') {
+    res.render('index.ejs', { name: req.user.name + ' student' })
+  }
+  else{
+    res.render('index.ejs', { name: req.user.name + ' teacher' })
+  }
 })
 
 app.get('/login', checkNotAuthenticated, (req, res) => {
@@ -58,7 +63,8 @@ app.post('/register', checkNotAuthenticated, async (req, res) => {
       id: Date.now().toString(),
       name: req.body.name,
       email: req.body.email,
-      password: hashedPassword
+      password: hashedPassword,
+      isStudent: req.body.checkbox
     })
     res.redirect('/login')
   } catch {
